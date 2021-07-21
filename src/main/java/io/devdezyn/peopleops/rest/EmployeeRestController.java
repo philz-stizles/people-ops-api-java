@@ -34,6 +34,7 @@ public class EmployeeRestController {
 
     @PostMapping("/employees")
     public Employee createEmployee(@RequestBody Employee employee) {
+        employee.setId((long) 0);
         employeeService.createEmployee(employee);
 
         return employee;
@@ -41,7 +42,7 @@ public class EmployeeRestController {
 
     @PutMapping("/employees")
     public Employee updateEmployee(@RequestBody Employee employee) {
-        employeeService.updateEmployee(employee);
+        employeeService.createEmployee(employee);
 
         return employee;
     }
